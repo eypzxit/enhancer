@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perfect Image Enhancer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1> AI Image Enhancer</h1>
+        <p>Upload your image and let the magic happen!</p>
+    </header>
+
+    <main>
+        <form id="enhanceForm">
+            <label for="imageUpload" class="upload-area">
+                Click to select or drag & drop an image (.jpg, .png)
+                <input type="file" id="imageUpload" name="imageFile" accept="image/jpeg,image/png" required>
+            </label>
+            <button type="submit" id="enhanceButton">Enhance Image</button>
+        </form>
+
+        <div id="statusMessage" class="hidden">Processing... Please wait.</div>
+
+        <div id="resultContainer" class="hidden">
+            <h2>Result</h2>
+            <div class="image-gallery">
+                <div class="image-card">
+                    <h3>Original</h3>
+                    <img id="originalPreview" src="#" alt="Original Image Preview" class="hidden">
+                </div>
+                <div class="image-card">
+                    <h3>Enhanced</h3>
+                    <img id="enhancedImage" src="#" alt="Enhanced Image">
+                    <a id="downloadLink" href="#" download="enhanced_image.jpg" class="hidden">Download Enhanced Image</a>
+                </div>
+            </div>
+        </div>
+    </main>
+    <footer>
+        <p>&copy; Akshay-Eypz 2025 </p>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
