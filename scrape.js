@@ -28,7 +28,7 @@ async function processImage(buffer) {
       headers: {
         ...form.getHeaders(),
         Authorization: Keyy,
-        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi Note 5 Pro Build/QQ3A.2008>
+        "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi Note 5 Pro Build/QQ3A.200805.001)",
       },
     }
   )
@@ -54,7 +54,7 @@ async function processImage(buffer) {
             ad: "0",
             Authorization: Keyy,
             "Content-Type": "application/x-www-form-urlencoded",
-            "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi Note 5 Pro Build/QQ3A.>
+            "User-Agent": "Dalvik/2.1.0 (Linux; U; Android 10; Redmi Note 5 Pro Build/QQ3A.200805.001)",
           },
           responseType: "arraybuffer",
           validateStatus: () => true, // Accept non-200 codes to check for readiness
