@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7f9; /* Light, calming background */
+    color: #333;
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* Header Styling */
+header {
+    background: linear-gradient(135deg, #007bff, #0056b3); /* Bright gradient */
+    color: white;
+    padding: 40px 20px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1em;
+    opacity: 0.9;
+}
+
+/* Main Content Layout */
+main {
+    flex-grow: 1;
+    max-width: 1200px;
+    width: 90%;
+    margin: 40px auto;
+    padding: 20px;
+    background-color: white;
+    border-radius: 12px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.05);
+}
+
+/* Upload Area/Form Styling */
+#enhanceForm {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px 0;
+    border-bottom: 1px solid #eee;
+    margin-bottom: 30px;
+}
+
+.upload-area {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 600px;
+    height: 150px;
+    border: 3px dashed #b0c4de; /* Soft blue dashed border */
+    border-radius: 8px;
+    color: #555;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    background-color: #f9f9f9;
+}
+
+.upload-area:hover {
+    border-color: #007bff;
+    background-color: #f0f8ff;
+}
+
+/* Hide the actual file input */
+#imageUpload {
+    display: none;
+}
+
+/* Button Styling */
+#enhanceButton {
+    padding: 12px 30px;
+    font-size: 1.1em;
+    color: white;
+    background-color: #28a745; /* Green for "Go" or action */
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+#enhanceButton:hover:not([disabled]) {
+    background-color: #218838;
+    transform: translateY(-2px);
+}
+
+#enhanceButton[disabled] {
+    background-color: #cccccc;
+    cursor: not-allowed;
+}
+
+/* Status Message Styling */
+#statusMessage {
+    text-align: center;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 6px;
+    font-weight: bold;
+    color: #333;
+    background-color: #fff3cd; /* Light warning color for status */
+    border: 1px solid #ffeeba;
+}
+
+#statusMessage.hidden {
+    display: none;
+}
+
+/* Error Styling */
+#statusMessage[style*="Error"] {
+    background-color: #f8d7da; /* Light red for errors */
+    border-color: #f5c6cb;
+    color: #721c24;
+}
+
+/* Result Container and Gallery */
+#resultContainer h2 {
+    text-align: center;
+    color: #007bff;
+    margin-bottom: 20px;
+    font-weight: 300;
+}
+
+.image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+}
+
+.image-card {
+    flex: 1;
+    min-width: 300px;
+    max-width: 450px;
+    background: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    padding-bottom: 20px;
+}
+
+.image-card h3 {
+    background-color: #f4f7f9;
+    padding: 10px;
+    margin-bottom: 15px;
+    color: #555;
+    font-weight: 400;
+}
+
+.image-card img {
+    max-width: 100%;
+    height: auto;
+    max-height: 400px; /* Limit image height for better comparison */
+    display: block;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.image-card a {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 20px;
+    transition: background-color 0.3s;
+}
+
+.image-card a:hover {
+    background-color: #0056b3;
+}
+
+/* Footer Styling */
+footer {
+    padding: 15px;
+    text-align: center;
+    color: #777;
+    background-color: #e9ecef;
+    margin-top: auto; /* Push to the bottom */
+}
+
+/* Utility Class */
+.hidden {
+    display: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .image-gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+    .image-card {
+        min-width: 90%;
+    }
+}
